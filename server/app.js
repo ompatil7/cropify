@@ -18,12 +18,22 @@ if (process.env.NODE_ENV === "development") {
 }
 app.use(express.json());
 //app.use(express.urlencoded({ extended: true }));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://cropify-server.vercel.app",
+];
+
 app.use(cookieparser());
 app.use(
   cors({
-    origin: "https://cropify-server.vercel.app/",
+    origin: function (origin, callback) {
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-    origin: true,
     optionsSuccessStatus: 200,
     allowedHeaders: [
       "set-cookie",
@@ -33,6 +43,19 @@ app.use(
     ],
   })
 );
+// app.use(
+//   cors({
+//     origin: "https://cropify-server.vercel.app",
+//     credentials: true,
+//     optionsSuccessStatus: 200,
+//     allowedHeaders: [
+//       "set-cookie",
+//       "Content-Type",
+//       "Access-Control-Allow-Origin",
+//       "Access-Control-Allow-Credentials",
+//     ],
+//   })
+// );
 // app.use(
 //   cors({
 //     origin: "http://localhost:5173",
