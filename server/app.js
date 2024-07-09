@@ -68,7 +68,10 @@ app.use(
 //     ],
 //   })
 // );
-
+// Add a route for the root URL
+app.get("/", (req, res) => {
+  res.status(200).send("Welcome to Cropify API!");
+});
 app.use("/api/v1/crops", cropRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/email", emailRouter);
