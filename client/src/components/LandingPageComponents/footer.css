@@ -1,0 +1,9 @@
+.footer-wrapper {
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-wrapper > .w-full {
+  flex: 1;
+}

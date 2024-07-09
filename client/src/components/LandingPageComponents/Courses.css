@@ -1,0 +1,88 @@
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.heading span {
+  color: #228b22;
+}
+
+.heading p {
+  color: #6d737a;
+}
+
+.rectangles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.empty-rectangle {
+  flex: 0 1 calc(25% - 20px);
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 550px;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rectangle-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.rectangle-name {
+  font-size: 28px;
+  color: #333;
+}
+
+.empty-rectangle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fertilizers {
+  background-color: #81c784;
+}
+
+.soil {
+  background-color: #c8e6c9;
+}
+
+.seeds {
+  background-color: #81c784;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .empty-rectangle {
+    flex: 0 1 calc(50% - 20px);
+    height: 150px;
+    margin: 15px;
+  }
+}

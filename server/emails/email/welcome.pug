@@ -1,0 +1,95 @@
+//- extends baseEmail
+
+
+//- block content
+//-     p Hi #{firstname},
+//-     p Welcome , we're glad to have you 🎉🙏
+//-     p We're all a big familiy here, so make sure to upload your user photo so we get to know you a bit better!
+//-     table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+//-         tbody
+//-             tr
+//-                 td(align='left')
+//-                     table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+//-                         tbody
+//-                             tr
+//-                                 td
+//-                                     a(href=`${url}`, target='_blank') Upload user photo
+//-     p If you need any help , please don't hesitate to contact me!
+//-     p - PRUTHVIJ DESAI, CEO
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Welcome to our Website!
+    link(rel="stylesheet", href="email.css")
+    style.
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f7f7f7;
+          margin: 0;
+          padding: 0;
+      }
+      .container {
+          max-width: 600px;
+          margin: 20px auto;
+          background-color: #ffffff;
+          padding: 40px;
+          border-radius: 8px;
+          box-shadow: 0 0 20px rgba(0,0,0,0.1);
+          display: flex;
+          flex-direction: column;
+      }
+      .head {
+          display: flex;
+          justify-content: center; /* Center the image and text horizontally */
+          align-items: center;
+          margin-bottom: 20px;
+      }
+      .img {
+          height: 60px;
+          width: 60px;
+          margin-right: 10px;
+      }
+      h3 {
+          color: #0e0202;
+          font-size: 28px;
+          margin: 0;
+      }
+      p {
+          color: #222;
+          font-size: 16px;
+          line-height: 1.6;
+          margin-bottom: 20px;
+          text-align: left;
+      }
+      .customer {
+          text-align: left;
+      }
+      .button {
+          display: inline-block;
+          padding: 15px 30px;
+          background-color: #4CAF50;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          font-size: 16px;
+          transition: background-color 0.3s;
+      }
+      .button:hover {
+          background-color: #45a049;
+      }
+  body
+    .container
+      .head
+        img.img(src="https://res.cloudinary.com/pruthvij/image/upload/v1714304883/g1umtv3zlem7mlk1tbvl.webp", alt="")
+        h3 Cropify
+      p.customer Dear #{firstName},
+      p Thank you for choosing us for your fertilizers and seed needs. We're excited to have you on board!
+      p Our website offers a wide range of high-quality fertilizers and seeds to help your plants thrive. Whether you're a seasoned gardener or just starting out, we have everything you need to make your garden flourish.
+      p Feel free to explore our website and discover our vast selection of products. If you have any questions or need assistance, our friendly customer support team is here to help.
+      p Happy gardening!
+      p(style="text-align: center;") 
+        a.button(href=`${url}`, target='_blank') Upload user photo
+        p If you need any help , please don't hesitate to contact me!
+        p - Cropify  

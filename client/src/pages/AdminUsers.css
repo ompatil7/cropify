@@ -1,0 +1,17 @@
+.slider-container {
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.slick-list {
+  display: flex; /* Ensure the list of slides is displayed as a flex container */
+}
+
+.slick-slide {
+  flex: 0 0 auto; /* Disable shrinking and growing of slides */
+  margin-right: 15px; /* Add a small margin between slides */
+}
+
+/* Optional: Adjust the width of the slides to fit the container */
+.slick-slide > div {
+  width: calc(100% - 15px); /* Calculate the width to account for the margin */
+}
