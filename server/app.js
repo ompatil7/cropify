@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(cookieparser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://cropify-server.vercel.app/",
     credentials: true,
     origin: true,
     optionsSuccessStatus: 200,
