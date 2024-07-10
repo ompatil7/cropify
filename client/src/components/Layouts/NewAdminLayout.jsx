@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import useUserData from "../userData";
-import { useMediaQuery } from "@material-ui/core";
+import { useMediaQuery } from "@mui/material"; // Corrected import from @material-ui/core to @mui/material
 
 const NewAdminLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
